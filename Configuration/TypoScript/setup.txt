@@ -1,0 +1,18 @@
+plugin.tx_trbcetable {
+	view {
+		templateRootPath = {$plugin.tx_trbcetable.view.templateRootPath}
+		partialRootPath = {$plugin.tx_trbcetable.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_trbcetable.view.layoutRootPath}
+	}
+	
+	table < tt_content.table.20
+}
+
+tt_content.table >
+tt_content.table = USER
+tt_content.table {
+	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+	vendorName = TRB
+	extensionName = TrbCeTable
+	pluginName = table
+}
